@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF0"
+    tools:context=".FailingTestsActivity">
+
+    <TextView
+        android:id="@+id/failingTestsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Failing Tests"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/failingTestsListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/testresult_displayer_button3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/failOneButton" />
+
+    <ImageButton
+        android:id="@+id/failOneButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="failOneButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/failTwoButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/failingTestsTitle"
+        app:srcCompat="@drawable/oneicon" />
+
+    <ImageButton
+        android:id="@+id/failTwoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="failTwoButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/failOneButton"
+        app:layout_constraintEnd_toStartOf="@+id/failThreeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/failOneButton"
+        app:layout_constraintTop_toTopOf="@+id/failOneButton"
+        app:srcCompat="@drawable/twoicon" />
+
+    <ImageButton
+        android:id="@+id/failThreeButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="failThreeButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/failTwoButton"
+        app:layout_constraintEnd_toStartOf="@+id/failFourButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/failTwoButton"
+        app:layout_constraintTop_toTopOf="@+id/failTwoButton"
+        app:srcCompat="@drawable/threeicon" />
+
+    <ImageButton
+        android:id="@+id/failFourButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="failFourButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/failThreeButton"
+        app:layout_constraintEnd_toStartOf="@+id/failFiveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/failThreeButton"
+        app:layout_constraintTop_toTopOf="@+id/failThreeButton"
+        app:srcCompat="@drawable/fouricon" />
+
+    <ImageButton
+        android:id="@+id/failFiveButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="failFiveButtonClicked"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/failFourButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/failFourButton"
+        app:layout_constraintTop_toTopOf="@+id/failFourButton"
+        app:srcCompat="@drawable/fiveicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
